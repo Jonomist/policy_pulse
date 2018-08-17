@@ -44,7 +44,7 @@ end
 
 # Welcome
 
-Welcome {first_name} to the consultation for the National ICT Innovation and Entrepreneurship Policy Vision. Message me anytime to continue, your input matters!
+Welcome {first_name} to the consultation for PolicyName. Message me anytime to continue, your input matters!
 Action: Get Started [button]
 
 
