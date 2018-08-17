@@ -1,6 +1,6 @@
 # National Policy Consultation 
 
-This is the opensource code repository of the digital policy consultation tool that will serve as the backbone for policy consultations across several countries in Africa and beyond. It is a digital policy consultation across a nation as a Rails App with two key elements: (a) a ‘collaborative policy-writing’ tool (b) a Facebook messenger bot. The consultation will be live for a specified perod, after which the insight, feedback, and deliberation will be consolidated, integrated, and built into a revised citizen-driven national vision for ICT innovation and entrepreneurship.
+This is the opensource code repository of Policy Pulse built by the i4policy initiative. Policy Pulse is a growing initiative to support Government’s to listen at scale and provide’s citizens with the opportunity to meaningfully contribute to making public policies better. 
 
 ## Work Flows
 
@@ -8,27 +8,18 @@ We have a [project board](https://github.com/i4policy/policy_consultation/projec
 
 When all the four milestones are completed, we will be ready to deploy the first national online policy consultation in Africa starting July 2nd.
 
-## User Stories
+## User Flows
 
-##### User: innovation hub leaders, founders, employees, entrepreneurs, aspiring entrepreneurs, techies, programmers 
-##### Admin: Office of Sub-Saharan Country 
-##### Policy: Innovation and Entrepreneurship Policy Vision 
+Admin: As a national office of innovation and entrepreneurship, I am seeking useful feedback on a new startup law, so that we can propose more appropriate legislation that emphasizes the needs of entrepreneurs and innovators and leads to a greater social impact.
 
 ### Web App: 
-We are going to modify a fork of Consul (information and documentation can be found below), a civic engagement tool developed by the city council of Madrid from 2015 onward. There are several tools in the Consul suite, however the one that we will be customizing and building off of for the consultation is the legislative processes and collaborative policy capability.
 
-The core user story is as follows: 
+The core user story is as follows:
 
-* As a User, I want to see how the consultation works so that I know what I’m supposed to do.
-* As a User, I want to interact with each sentence and section of the policy document so that I can provide my feedback without any minimum required input. 
-* As a User, I want to see my tangible contribution so that I can feel proud of my contribution, share it, and encourage others to get involved. 
-* As a User, I want to be able to remain anonymous to the admin with my contribution. 
-* As a User, I want to be notified when the final version of the policy is released. 
-* As an Admin, I want to be able to see all of the inputs from the consultation.
-* As an Admin, I want to be able to respond and interact with specific pieces of feedback and deliberation so that I can get more clarity or provide further clarity. 
-* As an Admin, I want to be able to publish the revised, final version of the policy to the platform for users to see.
-
-Relevant Documentation Here: https://consul_docs.gitbooks.io/docs/content/en/
+•	As a User, I want to see how the consultation works so that I know what I’m supposed to do.
+•	As a User, I want to interact with each sentence and section of the policy document so that I can provide my feedback without any minimum required input.
+•	As a User, I want to be able to remain anonymous to the admin with my contribution.
+•	As an Admin, I want to be able to see all of the inputs from the consultation.
 
 ### Messenger Bot: 
 
@@ -48,3 +39,9 @@ Relevant Documentation Here: https://developers.facebook.com/docs/messenger-plat
 We are using the following Ruby client to build the bot into the application: 
 
 https://github.com/jgorset/facebook-messenger
+
+----------------------------- 
+
+The closest project for reference is Consul, an all-in-one tool developed by the city of Madrid found here: https://consul_docs.gitbooks.io/docs/content/en/
+
+
