@@ -3,9 +3,12 @@
   // height: 100vh;
 }
 
-#toc {
-  background: white;
-  // height: 100vh;
+.doc-header {
+  margin-bottom: 35px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .im-finished {
@@ -22,12 +25,53 @@
   }
 }
 
-#accordion .card {
-  border-radius: 0rem;
-  text-align: left;
-  margin-top: 0rem;
-  font-weight: lighter;
+.popover {
+  max-width: 300px;
 }
+
+.popover-body {
+  font-size: 14px;
+  ol {
+    padding-left: 18px;
+  }
+}
+
+// #accordion .card {
+//   border-radius: 0rem;
+//   text-align: left;
+//   margin-top: 0rem;
+//   font-weight: lighter;
+// }
+
+.badge li {
+  font-size: 12px;
+}
+
+#accordion .card {
+    text-align: left;
+    margin-top: 0rem;
+    font-weight: lighter;
+    width: 100%;
+    color: black;
+    position: relative;
+    border-style: solid;
+    border-width: .5px;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+}
+
+#accordion .card:hover {
+  border-color: green;
+  border-width: 3px;
+}
+
 
 .legislationshow {
   margin-top: 100px;
@@ -39,19 +83,55 @@
   }
 }
 
+.finished .btn-lg {
+  margin: 15px;
+}
+
+.button-nav .btn-lg {
+  width: 15%;
+  margin: 0px 10px;
+  justify-content: flex-start;
+  text-align: center;
+}
+
 
 #accordion .form-control {
   border: 1px solid #ced4da;
 }
 
+#supporting-content {
+  justify-content: flex-start;
+  margin-left: -15px;
+  margin-top: 10px;
+  margin-right: 0px;
+}
+
+
+#supporting-content .col-6 {
+    padding-right: 15px;
+    padding-left: 0px;
+}
+
+#supporting-content a {
+  font-weight: 700;
+}
+
+.success-badges {
+  margin-left: 15px;
+}
 
 .card-header {
+  background-color: #ffffff;
   padding: 1rem .5rem;
   border-bottom:.5px solid rgba(0, 0, 0, 0.125);
   a {
     font-weight: lighter;
   }
 }
+
+// .card-header:hover {
+//   color: green;
+// }
 
 .scrollable {
     height: 100vh; /* or any value */
@@ -66,10 +146,19 @@
   display: block;
 }
 
-.form-control {
+.collapse .form-control {
   margin: 14px 0px;
+  width: 100%;
 }
 
+.feedback .form-control {
+  margin: 14px 0px;
+  width: 100%;
+}
+
+.sectionnav .dropdown {
+  margin-bottom: 40px;
+}
 
 .buttonspacing {
   margin: 14px 0px;
@@ -79,16 +168,9 @@
   text-align: left;
 }
 
-.card-header {
-  background-color: white;
-}
-
 .finished {
   margin: 20px 0px;
-  text-align: right;
-  .btn-lg {
-    padding: 0.5rem 8rem;
-  }
+  text-align: center;
 }
 
 .onesectionnav {

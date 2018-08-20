@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+  # root to: 'devise/registrations#new'
+
+  get 'download_pdf', to: "legislations#download_pdf"
 
   resources :legislations, only: [:show] do
     resources :sections, only: [:show]
@@ -20,14 +23,16 @@ Rails.application.routes.draw do
     resources :questions, only: [:show]
   end
 
+  resources :metadatum, only: [:show]
+
+
 
   get "/pages/finished", to: 'pages#finished'
 
   resources :answers
 
 
-  devise_for :users
-    # controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'users/omniauth_callbacks' }
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -35,5 +40,6 @@ Rails.application.routes.draw do
   # mount Facebook::Messenger::Server, at: 'bot'
 
   get 'dashboard', to: 'pages#dashboard'
+  get 'dashboard_2', to: 'pages#dashboard_2'
 
 end

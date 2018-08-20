@@ -4,42 +4,40 @@
   color: green;
 }
 
-.instruction-slide-through {
+#instructions {
   font-size: 24px;
   margin: 35px 0px;
-}
-
-.btn-medium {
-  color: #999999;
-  border: 1px solid #999999;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-}
-.btn-medium:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: #999999;
-}
-
-#backbutton {
-  background: none;
-  border: none;
-  justify-content: space-between;
-}
-
-#nextbutton {
-  background: none;
-  border: none;
-  justify-content: space-between;
 }
 
 .new-consultation {
   margin-bottom: 35px;
 }
 
+.abstract-text {
+  padding: 15px;
+  text-align: left;
+  background-color: #f8f9fa;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
 .navigation-btns {
   display:flex;
  justify-content: center;
+
+ button {
+  margin: 10px;
+ }
+}
+
+#how-it-works ul {
+  list-style-type: none;
+  font-size: 24px;
+  li {
+    margin: 10px 0px;
+  }
+}
+
+#thank-you p {
+  font-size: 24px;
 }
