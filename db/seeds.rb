@@ -39,7 +39,7 @@ GeneralFeedback.destroy_all
 
 
 puts "creating user"
-u = User.create!(email: "bobstevens@charitize.com", password: "123456")
+u = User.create!(email: "theresafend@gmail.com", password: "Lefkada88")
 User.create!(email: "user2@charitize.com", password: "123456")
 User.create!(email: "user3@charitize.com", password: "123456")
 User.create!(email: "user4@charitize.com", password: "123456")
@@ -47,20 +47,32 @@ User.create!(email: "user5@charitize.com", password: "123456")
 User.create!(email: "user6@charitize.com", password: "123456")
 
 puts "creating admin user"
-AdminUser.create!(email:"admin@charitize.com", password: "123456")
+AdminUser.create!(email:"theresafend@gmail.com", password: "Lefkada88")
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 puts "creating legislation"
 l = Legislation.create!(
-title: 'Lorum Ipsum',
-introduction: "lorummmmmmmmmmmmmmmmmmmmmmmmmmmm")
+title: 'Africa Innovation Policy Manifesto',
+introduction: "We are social innovators, entrepreneurs, innovation spaces and startups across Africa that have come together to articulate and share our views and recommendations for policies that we believe will accelerate digital transformation and contribute to more equitable, inclusive and sustainable development of our economies and societies.
+The actors who have undersigned this document are ready and willing to strategically engage with policymakers to further this agenda.")
 
 puts "creating consultation"
-c = Consultation.create!(title: "Africa Innovation Policy Manifesto", legislation: l, user: u)
+c = Consultation.create!(title: "i4policy Pilot Manifesto", legislation: l, user: u)
 
+puts "creating signatory categories"
+cat1 = Category.create!(title: "GLOBAL AND REGIONAL HUB NETWORKS")
+cat2 = Category.create!(title: "NATIONAL HUB NETWORKS")
+cat3 = Category.create!(title: "COMMUNITY INNOVATION HUBS")
+cat4 = Category.create!(title: "SUPPORTERS")
+cat5 = Category.create!(title: "AFFILIATES")
+
+puts "creating signatories"
+Signatory.create!(organization: "Afrilabs", person: "Anna Ekeledo", category: cat1, date: Date.parse('2018-05-09'), consultation: c)
+Signatory.create!(organization: "Global Innovation Gathering", person: "GIG; Vicy Wenzelmann", category: cat1, date: Date.parse('2018-05-09'), consultation: c)
+Signatory.create!(organization: "Network of Incubators and Innovators in Nigeria", person: "Bankole Olaruntoba", category: cat2, date: Date.parse('2018-05-09'), consultation: c)
+Signatory.create!(organization: "Bolab", person: "Médard C. Agbayazon", category: cat3, date: Date.parse('2018-05-09'), consultation: c, location: "Benin")
 
 puts "creating sections"
-
 s = Section.create(title: 'SECTION NAME 1',
 description: "lorem ipsum",
 legislation: l)
