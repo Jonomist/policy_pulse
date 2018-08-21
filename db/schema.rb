@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_26_102553) do
+ActiveRecord::Schema.define(version: 2018_08_21_064023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,18 @@ ActiveRecord::Schema.define(version: 2018_06_26_102553) do
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cateogries", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "clauses", force: :cascade do |t|
     t.string "content"
     t.bigint "section_id"
@@ -69,6 +81,7 @@ ActiveRecord::Schema.define(version: 2018_06_26_102553) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["legislation_id"], name: "index_consultations_on_legislation_id"
     t.index ["user_id"], name: "index_consultations_on_user_id"
   end
@@ -84,10 +97,8 @@ ActiveRecord::Schema.define(version: 2018_06_26_102553) do
   create_table "legislations", force: :cascade do |t|
     t.string "title"
     t.text "introduction"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_legislations_on_user_id"
   end
 
   create_table "metadata", force: :cascade do |t|
@@ -116,6 +127,19 @@ ActiveRecord::Schema.define(version: 2018_06_26_102553) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["legislation_id"], name: "index_sections_on_legislation_id"
+  end
+
+  create_table "signatories", force: :cascade do |t|
+    t.date "date"
+    t.string "person"
+    t.string "organization"
+    t.string "location"
+    t.bigint "category_id"
+    t.bigint "consultation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_signatories_on_category_id"
+    t.index ["consultation_id"], name: "index_signatories_on_consultation_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -148,8 +172,9 @@ ActiveRecord::Schema.define(version: 2018_06_26_102553) do
   add_foreign_key "consultations", "legislations"
   add_foreign_key "consultations", "users"
   add_foreign_key "general_feedbacks", "consultations"
-  add_foreign_key "legislations", "users"
   add_foreign_key "metadata", "clauses"
   add_foreign_key "questions", "clauses"
   add_foreign_key "sections", "legislations"
+  add_foreign_key "signatories", "categories"
+  add_foreign_key "signatories", "consultations"
 end
