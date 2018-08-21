@@ -62,12 +62,6 @@ ActiveRecord::Schema.define(version: 2018_08_21_064023) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "cateogries", force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "clauses", force: :cascade do |t|
     t.string "content"
     t.bigint "section_id"
