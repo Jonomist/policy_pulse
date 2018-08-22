@@ -83,7 +83,6 @@ legislation: l)
 multispaces_sec = Section.create!(title: 'PUBLIC & MULTIDISCIPLINARY SPACES',
 legislation: l)
 
-
 digital_sec = Section.create!(title: 'DIGITAL INFRASTRUCTURE',
 legislation: l)
 

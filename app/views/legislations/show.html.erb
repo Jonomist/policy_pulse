@@ -47,7 +47,6 @@
     <div id="accordion">
       <% section.clauses.each do |clause| %>
       <div class="card">
-
        <div class="card-header" id="headingOne">
         <h5 class="mb-0">
           <a class="btn btn-link clause" data-toggle="collapse" data-target="#collapse_<%= clause.id %>" aria-expanded="true" aria-controls="collapseOne" style="white-space: normal;">
@@ -262,32 +261,30 @@
           <!-- </div> -->
         <%# end %> <!-- closed for unless -->
 
-      </div> <!-- closing data-target:"slideshow-slide -->
-    </div> <!-- closing card -->
-  </div> <!-- dont get whats it closing- old -->
-  <%# end %> <!-- noot?? closing legislations loop -->
+        </div> <!-- closing data-target:"slideshow-slide -->
+      </div> <!-- closing card -->
+    </div> <!-- dont get whats it closing- old -->
+    <%# end %> <!-- noot?? closing legislations loop -->
 
 
-            <div data-target="slideshow.slide" class="slide">
-              <%= clause.questions[2].content %>
-              <%= form_for Answer.new, html: { id: "reportform" }, remote: true, update: { success: "response", failure: "error"} do |f| %>
-              <div class="form-group">
-                <%= f.hidden_field :user_id, :value => current_user.id  %>
-                <%= f.hidden_field :question_id, :value => clause.questions[2].id  %>
-                <%= f.text_area :content, :name => "content", required: true, :class => 'form-control', placeholder: clause.content %>
-                <a data-action="slideshow#close slideshow#revised slideshow#next">
-                  <%= f.submit 'suggest revision', :class => 'btn-primary' %>
-                </a>
-              </div>
-              <% end %>
-            <!-- </div> -->
-            <%# end %>
+    <div data-target="slideshow.slide" class="slide">
+      <%= clause.questions[2].content %>
+      <%= form_for Answer.new, html: { id: "reportform" }, remote: true, update: { success: "response", failure: "error"} do |f| %>
+        <div class="form-group">
+          <%= f.hidden_field :user_id, :value => current_user.id  %>
+          <%= f.hidden_field :question_id, :value => clause.questions[2].id  %>
+          <%= f.text_area :content, :name => "content", required: true, :class => 'form-control', placeholder: clause.content %>
+          <a data-action="slideshow#close slideshow#revised slideshow#next">
+            <%= f.submit 'suggest revision', :class => 'btn-primary' %>
+          </a>
+        </div>
+      <% end %>
+    <!-- </div> -->
+    <%# end %>
+    </div> <!-- closing slideshow.slide -->
+<!-- </div> -->
 
-
-          </div>
-        <!-- </div> -->
-
-      </div>
+<!-- </div> not closing anything? -->
 
 
       <% end %> <!-- closed -->
@@ -304,5 +301,5 @@
    <div class="finished">
    </div>
  </div>
-</div>
-</div>
+<!-- </div>
+</div> -->
