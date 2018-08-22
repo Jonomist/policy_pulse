@@ -43,7 +43,57 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
 puts "creating legislation"
 Legislation.create!(
 title: 'Lorum Ipsum',
-introduction: "lorummmmmmmmmmmmmmmmmmmmmmmmmmmm",
+introduction: "We are
+social
+innovators,
+entrepreneurs,
+innovation
+spaces
+and
+startups
+across
+Africa
+that
+have
+come
+together
+to
+articulate
+and
+share
+our
+views
+and
+recommendations
+for
+policies
+that
+we
+believe
+will
+accelerate
+digital
+transformation
+and
+contribute
+to
+more
+equitable,
+inclusive and sustainable development of our economies and societies.
+The
+actors
+who
+have
+undersigned
+this
+document
+are
+ready
+and
+willing
+to
+strategically
+engage with policymakers to further this agenda.",
 user_id: 1)
 
 puts "creating consultation"

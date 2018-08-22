@@ -30,9 +30,14 @@
 //   text-align: center
 // }
 
+.btn.btn-secondary.cursor{
+  cursor: default;
+}
+
 .page-description{
-  width: 625px;
+  width: 760px;
   margin: 0 auto;
+  text-align: left;
 }
 
 .card-category {

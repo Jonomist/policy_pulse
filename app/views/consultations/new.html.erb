@@ -13,10 +13,10 @@
             <div data-target="slideshow.slide" class="slide" id="first">
               <div id="welcome">
                 <div class="page-header">
-                  <h2>Welcome to the consultation of the <%= @legislation.title %> by i4policy </h2>
+                  <h2>WELCOME TO THE CONSULTATION OF THE <%= @legislation.title.upcase %> BY I4POLICY </h2>
                 </div>
                 <div class="page-description">
-                <p> This Manifesto was co-created and adopted at the African Innovation Hub Convention in <strong>May 6-7, 2018</strong> in <strong>Kigali, Rwanda.</strong> <br>
+                <p> This Manifesto was co-created and adopted at the African Innovation Hub Convention in <strong>May 6-7, 2018</strong> in <strong>Kigali, Rwanda.</strong> <br><br>
                 This tool intends to gather feedback on each section so that we can create a better Africa together.
 <!--
                 This tools intends to create a unifying  vision for transforming Africa's economy and accelerate economic growth. The vision is composed of three sections, and you are invited to feedback on specific policy recommendations and on the entire policy. --></p>
@@ -27,15 +27,18 @@
 <!-- instruciton 2 -->
             <div data-target="slideshow.slide" class="slide" id="second">
                <div id="how-it-works" style="">
-                <h2>Here's how it works</h2>
+                <h2>HOW IT WORKS</h2>
                 <ul style="list-style-type: none;">
                   <li>
+                    <i class="fas fa-mouse-pointer"></i>
                     <strong>Click</strong> on any vision statement
                   </li>
                   <li>
+                    <i class="fas fa-question"></i>
                     <strong>Answer</strong> questions using 1 to 5 scale
                   </li>
                   <li>
+                    <i class="fas fa-edit"></i>
                     <strong>Suggest</strong> a revision if you want to
                   </li>
                 </ul>
@@ -46,28 +49,32 @@
 <!-- instruciton 3 -->
             <div data-target="slideshow.slide" class="slide">
               <div id="scale" style="">
-                <h2>Questions use 1 to 5 scale</h2>
+                <h2>QUESTIONS USE 1 TO 5 SCALE</h2>
                 <p>The series of questions asked will use a scale in which</p>
-                  <p>1 = <strong>not at all</strong></p>
-                  <p>5 = <strong>very much</strong></p>
+                  <p><i class="far fa-thumbs-down"></i> 1 = <strong>not at all</strong></p>
+                  <p><i class="far fa-thumbs-up"></i> 5 = <strong>very much</strong></p>
                 </div>
               </div>
 
               <div data-target="slideshow.slide" class="slide" id="third">
                 <div id="own-pace" style="">
-                  <h2>Go at your own pace</h2>
-                  <p>There is no required or minimum participation, you can come back and login anytime. If you think we can improve anything to support innovation, entrepreneurship or ICT developmemt, please let us know how.</p>
-                  <p>Click the <button class="btn btn-primary">Finish Consultation</button> button when you have finished your entire consultation.</p>
+                  <h2>GO AT YOUR OWN PACE</h2>
+                  <div class="page-description">
+                  <p>Contribute as much as you like! There is no required or minimum participation - feel free to come back and login at anytime. <br>
+                    <br>Also, if you think we can improve anything to support innovation, entrepreneurship or ICT developmemt, please let us know how in the <strong>General Feedback</strong> section at the end.</p>
+                  <p>Click the <div class="btn btn-secondary cursor">Finish Consultation</div> button when you have finished your entire consultation.</p>
+                </div>
                 </div>
               </div>
 
 <!-- instruciton 4 -->
               <div data-target="slideshow.slide" class="slide" id="last">
                 <div id="abstract" style="">
-                  <h2>Abstract</h2>
+                  <h2>Introduction</h2>
                   <div class="abstract-text">
                     <p>
-                      Technological change is accelerating and the global economy is transforming in response. Automation
+                      <%= @legislation.introduction %>
+                     <!--  Technological change is accelerating and the global economy is transforming in response. Automation
                       and artificial intelligence are in the process of making redundant the low-skilled jobs that many
                       COUNTRY have yet to take. Thus, the majority of COUNTRY are at serious risk of being left behind
                       unless there is an urgent technological revolution that can transform agriculture, education, and all
@@ -76,7 +83,7 @@
                       Technology has the ability to unite all and remove barriers to economic transformation. To
                       unlock our national potential, National Information Technology Development Agency (NITDA)
                       proposes a number of urgent measures to connect, educate and enable digital innovation.
-                      This document provides the unifying policy vision for ICT Innovation and Entrepreneurship.
+                      This document provides the unifying policy vision for ICT Innovation and Entrepreneurship. -->
                     </p>
                   </div>
                 </div>
