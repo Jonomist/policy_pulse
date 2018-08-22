@@ -239,21 +239,21 @@
                 <% end %>
 
 
-                <% unless clause.questions[3].answers.exists? %>
-                <div data-target="slideshow.slide" class="slide">
-                  <%= clause.questions[3].content %>
-                  <%= form_for Answer.new, html: { id: "reportform" }, remote: true, update: { success: "response", failure: "error"} do |f| %>
-                  <div class="form-group">
-                    <%= f.hidden_field :user_id, :value => current_user.id  %>
-                    <%= f.hidden_field :question_id, :value => clause.questions[3].id  %>
-                    <%= f.text_area :content, :name => "content", :class => 'form-control', placeholder: clause.content %>
-                    <a data-action="slideshow#next">
-                      <%= f.submit 'suggest revision', :class => 'btn-primary' %>
-                    </a>
-                  </div>
-                  <% end %>
-                </div>
-                <% end %>
+                <%# unless clause.questions[3].answers.exists? %>
+                <!-- <div data-target="slideshow.slide" class="slide"> -->
+                  <%#= clause.questions[3].content %>
+                  <%#= form_for Answer.new, html: { id: "reportform" }, remote: true, update: { success: "response", failure: "error"} do |f| %>
+                  <!-- <div class="form-group"> -->
+                    <%#= f.hidden_field :user_id, :value => current_user.id  %>
+                    <%#= f.hidden_field :question_id, :value => clause.questions[3].id  %>
+                    <%#= f.text_area :content, :name => "content", :class => 'form-control', placeholder: clause.content %>
+                    <!-- <a data-action="slideshow#next"> -->
+                      <%#= f.submit 'suggest revision', :class => 'btn-primary' %>
+                    <!-- </a> -->
+                  <!-- </div> -->
+                  <%# end %>
+                <!-- </div> -->
+                <%# end %>
 
 
               </div>
