@@ -83,10 +83,7 @@ legislation: l)
 multispaces_sec = Section.create!(title: 'PUBLIC & MULTIDISCIPLINARY SPACES',
 legislation: l)
 
-<<<<<<< HEAD
-Section.create!(title: 'SECTION NAME 3',
-description: "lorem ipsum",
-=======
+
 digital_sec = Section.create!(title: 'DIGITAL INFRASTRUCTURE',
 legislation: l)
 
@@ -104,7 +101,6 @@ intellectual_sec = Section.create!(title: 'INTELLECTUAL PROPERTY RIGHTS',
 legislation: l)
 
 tax_sec = Section.create!(title: 'TAXATION SYSTEM',
->>>>>>> ae4d5bdf116a48d442587084c10da44bf2e71f26
 legislation: l)
 
 
