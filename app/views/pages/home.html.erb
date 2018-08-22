@@ -10,7 +10,7 @@
                 <% else %>
                   <%= link_to "Get Started", new_legislation_consultation_path(@legislation), :class => 'btn btn-lg btn-primary get-started-button', :role => 'button' %>
                 <p>
-                  POLicyNAME is designed to strengthen the technology entrepreneurship ecosystem, and we want your input to help co-create this national vision.
+                  <%= @legislation.title %> is designed to strengthen the technology entrepreneurship ecosystem, and we want your input to help co-create this national vision.
                 </p>
                 <% end %>
               </div>
