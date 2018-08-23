@@ -26,11 +26,17 @@ export default class extends Controller {
   }
 
 showFinished(){
-  var lastSection = document.getElementById("Supporting the Ecosystem for Innovative Entrepreneurship")
-  var firstSection = document.getElementById("Digital Infrastructure")
-  var secondSection = document.getElementById("Education Reform, Skills Development and R+D")
+  var firstSection = document.getElementById("EDUCATION AND R&D")
+  var secondSection = document.getElementById("PUBLIC & MULTIDISCIPLINARY SPACES")
+  var thirdSection = document.getElementById("PUBLIC & MULTIDISCIPLINARY SPACES")
+  var fourthSection = document.getElementById("DIGITAL INFRASTRUCTURE")
+  var fifthSection = document.getElementById("BUSINESS REGISTRATION")
+  var sixthSection = document.getElementById("FINANCE FOR INNOVATION AND ENTREPRENEURSHIP")
+  var seventhSection = document.getElementById("LOCAL AND PAN-AFRICAN MARKETS")
+  var eigthSection = document.getElementById("INTELLECTUAL PROPERTY RIGHTS")
+  var lastSection = document.getElementById("TAXATION SYSTEM")
   var continueTo = document.getElementById("continueto")
-  var intro = document.getElementById("Introduction")
+  // var intro = document.getElementById("Introduction")
   var finished = document.getElementById("finished");
   var next = document.getElementById("nextbutton");
   var previous = document.getElementById("prevbutton");
@@ -43,20 +49,58 @@ showFinished(){
       finished.style.display = 'none';
   }
 
-  if (intro.classList.contains("slide--current")) {
-      previous.style.display = 'none';
-      next.style.display = 'none';
-      continueto.style.display = 'none' ? '' : 'none';
-      finished.style.display = 'none';
-  }
+  // if (intro.classList.contains("slide--current")) {
+  //     previous.style.display = 'none';
+  //     next.style.display = 'none';
+  //     continueto.style.display = 'none' ? '' : 'none';
+  //     finished.style.display = 'none';
+  // }
 
   if (secondSection.classList.contains("slide--current")) {
       finished.style.display = 'none';
+      continueto.style.display = 'none';
+      next.style.display = 'none' ? '' : 'none';
+  }
+
+  if (thirdSection.classList.contains("slide--current")) {
+      finished.style.display = 'none';
+      continueto.style.display = 'none';
+      next.style.display = 'none' ? '' : 'none';
+  }
+
+  if (fourthSection.classList.contains("slide--current")) {
+      finished.style.display = 'none';
+      continueto.style.display = 'none';
+      next.style.display = 'none' ? '' : 'none';
+  }
+
+  if (fifthSection.classList.contains("slide--current")) {
+      finished.style.display = 'none';
+      continueto.style.display = 'none';
+      next.style.display = 'none' ? '' : 'none';
+  }
+
+  if (sixthSection.classList.contains("slide--current")) {
+      finished.style.display = 'none';
+      continueto.style.display = 'none';
+      next.style.display = 'none' ? '' : 'none';
+  }
+
+  if (seventhSection.classList.contains("slide--current")) {
+      finished.style.display = 'none';
+      continueto.style.display = 'none';
+      next.style.display = 'none' ? '' : 'none';
+  }
+
+  if (eigthSection.classList.contains("slide--current")) {
+      finished.style.display = 'none';
+      continueto.style.display = 'none';
       next.style.display = 'none' ? '' : 'none';
   }
 
   if (lastSection.classList.contains("slide--current")) {
       next.style.display = 'none';
+      continueto.style.display = 'none';
       finished.style.display = 'none' ? '' : 'none';
   }
 }

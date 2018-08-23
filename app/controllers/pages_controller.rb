@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @legislation = Legislation.find(1)
+    @legislation = Legislation.find_by(title: 'Africa Innovation Policy Manifesto')
   end
 
 
