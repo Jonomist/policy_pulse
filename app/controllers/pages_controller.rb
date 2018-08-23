@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @legislation = Legislation.find(1)
-    @consultation = Consultation.find(1)
+    @legislation = Legislation.find(2)
+
   end
 
 
