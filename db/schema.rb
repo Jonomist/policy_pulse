@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_23_041731) do
+ActiveRecord::Schema.define(version: 2018_08_24_081946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -137,6 +137,14 @@ ActiveRecord::Schema.define(version: 2018_08_23_041731) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "subclauses", force: :cascade do |t|
+    t.bigint "clause_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["clause_id"], name: "index_subclauses_on_clause_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -173,4 +181,5 @@ ActiveRecord::Schema.define(version: 2018_08_23_041731) do
   add_foreign_key "sections", "legislations"
   add_foreign_key "signatories", "consultations"
   add_foreign_key "signatories", "signatory_categories"
+  add_foreign_key "subclauses", "clauses"
 end
