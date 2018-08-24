@@ -1,5 +1,3 @@
-
-
 <div class="container new-consultation" data-controller="instruction">
   <div class="row">
     <div class="col-lg-10 col-xs-12 col-sm-12">
@@ -7,15 +5,13 @@
         <div class="card-description">
 
 <!-- instruciton 1 -->
-
           <div data-controller="slideshow" id="instructions">
-
             <div data-target="slideshow.slide" class="slide" id="first">
               <div id="welcome">
                 <div class="page-header">
                   <h2>Welcome to your policy consultation</h2>
                 </div>
-                <p>The vision intends to create a unifying policy vision for transforming Nigeria's economy and accelerating economic growth. The vision is composed of three sections, and you are invited to feedback on specific policy recommendations and on the entire policy.</p>
+                <p>The vision intends to create a unifying policy vision for transforming Africa's economy and accelerate economic growth through innovative and engaging political participation. The vision is composed of <%= @legislation.sections.length %> sections, and you are invited to feedback on each specific article as well as on the entire policy.</p>
               </div>
             </div>
 
@@ -25,12 +21,15 @@
                 <h2>Here's how it works</h2>
                 <ul style="list-style-type: none;">
                   <li>
+                    <i class="fas fa-mouse-pointer"></i>
                     <strong>Click</strong> on any vision statement
                   </li>
                   <li>
+                    <i class="fas fa-question"></i>
                     <strong>Answer</strong> questions using 1 to 5 scale
                   </li>
                   <li>
+                    <i class="fas fa-edit"></i>
                     <strong>Suggest</strong> a revision if you want to
                   </li>
                 </ul>
@@ -43,18 +42,18 @@
               <div id="scale" style="">
                 <h2>Questions use 1 to 5 scale</h2>
                 <p>The series of questions asked will use a scale in which</p>
-                  <p>1 = <strong>not at all</strong></p>
-                  <p>5 = <strong>very much</strong></p>
-                </div>
+                <p><i class="far fa-thumbs-down"></i> 1 = <strong>not at all</strong></p>
+                <p><i class="far fa-thumbs-up"></i> 5 = <strong>very much</strong></p>
               </div>
+            </div>
 
-              <div data-target="slideshow.slide" class="slide" id="third">
-                <div id="own-pace" style="">
-                  <h2>Go at your own pace</h2>
-                  <p>There is no required or minimum participation, you can come back and login anytime. If you think we can improve anything to support innovation, entrepreneurship or ICT developmemt, please let us know how.</p>
-                  <p>Click the <button class="btn btn-primary">Finish Consultation</button> button when you have finished your entire consultation.</p>
-                </div>
+            <div data-target="slideshow.slide" class="slide" id="third">
+              <div id="own-pace" style="">
+                <h2>Go at your own pace</h2>
+                <p>There is no required or minimum participation, you can come back and login anytime. If you think we can improve anything to support innovation, entrepreneurship or technological developmemt, please let us know how.</p>
+                <p>Click the <button class="btn btn-secondary cursor">Finish Consultation</button> button when you have finished your entire consultation.</p>
               </div>
+            </div>
 
 <!-- instruciton 4 -->
               <div data-target="slideshow.slide" class="slide" id="last">
@@ -62,16 +61,7 @@
                   <h2>Abstract</h2>
                   <div class="abstract-text">
                     <p>
-                      Technological change is accelerating and the global economy is transforming in response. Automation
-                      and artificial intelligence are in the process of making redundant the low-skilled jobs that many
-                      Nigerians have yet to take. Thus, the majority of Nigerians are at serious risk of being left behind
-                      unless there is an urgent technological revolution that can transform agriculture, education, and all
-                      other spheres of public life.
-
-                      Technology has the ability to unite all and remove barriers to economic transformation. To
-                      unlock our national potential, National Information Technology Development Agency (NITDA)
-                      proposes a number of urgent measures to connect, educate and enable digital innovation.
-                      This document provides the unifying policy vision for ICT Innovation and Entrepreneurship.
+                      <%= @legislation.introduction %>
                     </p>
                   </div>
                 </div>
