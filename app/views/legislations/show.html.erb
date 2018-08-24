@@ -39,7 +39,7 @@
 
   <div class="section-info">
     <h3>Section <%= section.id %>: <%= section.title %></h3>
-    <p>Visions <%= section.clauses.first.id %> through <%= section.clauses.last.id %> out of 23</p>
+    <p>Visions <%= section.clauses.first.id %> through <%= section.clauses.last.id %> out of <%= Clause.all.count %></p>
     <p><%= section.description %></p>
   </div>
 
