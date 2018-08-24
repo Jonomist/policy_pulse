@@ -44,8 +44,7 @@ end
 
 # Welcome
 
-Welcome {first_name} to the consultation for the National ICT Innovation and Entrepreneurship Policy Vision. Message me anytime to continue, your input matters!
-Action: Get Started [button]
+Welcome {first_name} to the consultation for i4policy's African Policy Manifesto Message me anytime to continue, your input matters!
 
 
 # Overview
