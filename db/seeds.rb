@@ -729,6 +729,9 @@ Answer.destroy_all
 puts 'deleting all questions'
 Question.destroy_all
 
+puts 'deleting all subclauses'
+Subclause.destroy_all
+
 puts 'deleting all clauses'
 Clause.destroy_all
 
@@ -815,7 +818,17 @@ cl1 = Clause.create!(section: education_sec,
   Question.create!(content: 'Please provide your suggested revision', clause: cl1)
 
 cl9 = Clause.create!(section: education_sec,
-  content:'These can and must be achieved through a number of approaches: 1) apportioning a percentage of national fiscal budgets to various Research and Development and Innovation education, such as our national commitments to invest 1% of GDP in R&D; 2) establishing partnerships between government labs, universities and regulatory bodies; 3) supporting Intellectual Property Rights acquisition; 4) Supporting multidisciplinary research; 5) incentivizing the private sector to develop digital infrastructure, such as internet, hardware and digital facilities for social development; 6) activating a national and pan-African sharing platform to develop national strategies, advise and inform governments; 7) encouraging diversity and inclusion in Science, Technology, Engineering, Arts and Mathematics (STEAM) education, particularly supporting marginalized groups such as women and people living with disabilities; 8) establishing feasible innovation channels for the market contexts; 9) developing strategic partnerships with different ecosystem players to co-create curriculum; 10) continuing to emphasize Arts, Culture and Humanities, which remain just as important to empowering citizens to drive the continent’s digital transformation, as the current emphasis on education on STEAM.')
+  content:'These can and must be achieved through a number of approaches:')
+  sc9 = Subclause.create!(clause: cl9, content:"1) apportioning a percentage of national fiscal budgets to various Research and Development and Innovation education, such as our national commitments to invest 1% of GDP in R&D;")
+  sc10 = Subclause.create!(clause: cl9, content:"2) establishing partnerships between government labs, universities and regulatory bodies;")
+  sc11 = Subclause.create!(clause: cl9, content:"3) supporting Intellectual Property Rights acquisition;")
+  sc12 = Subclause.create!(clause: cl9, content:"4) Supporting multidisciplinary research;")
+  sc13 = Subclause.create!(clause: cl9, content:"5) incentivizing the private sector to develop digital infrastructure, such as internet, hardware and digital facilities for social development; ")
+  sc14 = Subclause.create!(clause: cl9, content:"6) activating a national and pan-African sharing platform to develop national strategies, advise and inform governments; ")
+  sc15 = Subclause.create!(clause: cl9, content:"7) encouraging diversity and inclusion in Science, Technology, Engineering, Arts and Mathematics (STEAM) education, particularly supporting marginalized groups such as women and people living with disabilities;")
+  sc16 = Subclause.create!(clause: cl9, content:"8) establishing feasible innovation channels for the market contexts;")
+  sc17 = Subclause.create!(clause: cl9, content:"9) developing strategic partnerships with different ecosystem players to co-create curriculum;")
+  sc18 = Subclause.create!(clause: cl9, content:"10) continuing to emphasize Arts, Culture and Humanities, which remain just as important to empowering citizens to drive the continent’s digital transformation, as the current emphasis on education on STEAM.")
   Question.create!(content: 'How well does this represent your views?', clause: cl9)
   Question.create!(content: 'Does this strengthen the COUNTRY technology entrepreneurship ecosystem?', clause: cl9)
   Question.create!(content: 'Please provide your suggested revision', clause: cl9)
@@ -930,8 +943,17 @@ cl18 = Clause.create!(content: 'Governments must also assess how to ease mobilit
   Question.create!(content: 'Does this strengthen the COUNTRY technology entrepreneurship ecosystem?', clause: cl18)
   Question.create!(content: 'Please provide your suggested revision', clause: cl18)
 
-cl19 = Clause.create!(content: 'To achieve our joint goals of inclusive development and digital transformation, we believe innovation communities and governments must work in collaboration to 1) support local & African SMEs; 2) increase access to vital information, such as national and cross-border regulatory compliance; 3) establish clear and transparently-enforced investment laws; 4) ease mobility of people throughout the continent; 5) remove barriers for cross-border financial transactions; 6) ease restrictions on intra-African trade; 7) ensure inclusion & diversity throughout the process; and, 8) guarantee effective governance, consultation and enforcement of existing and new policies.',
+cl19 = Clause.create!(content: 'To achieve our joint goals of inclusive development and digital transformation, we believe innovation communities and governments must work in collaboration to:',
  section: local_sec)
+
+sc1 = Subclause.create!(clause: cl19, content: "1) support local & African SMEs;")
+sc2 = Subclause.create!(clause: cl19, content: "2) increase access to vital information, such as national and cross-border regulatory compliance; ")
+sc3 = Subclause.create!(clause: cl19, content: "3) establish clear and transparently-enforced investment laws;")
+sc4 = Subclause.create!(clause: cl19, content: "4) ease mobility of people throughout the continent;")
+sc5 = Subclause.create!(clause: cl19, content: "5) remove barriers for cross-border financial transactions;")
+sc6 = Subclause.create!(clause: cl19, content: "6) ease restrictions on intra-African trade; ")
+sc7 = Subclause.create!(clause: cl19, content: "7) ensure inclusion & diversity throughout the process; and,")
+sc8 = Subclause.create!(clause: cl19, content: "8) guarantee effective governance, consultation and enforcement of existing and new policies.")
 
   Question.create!(content: 'How well does this represent your views?', clause: cl19)
   Question.create!(content: 'Does this strengthen the COUNTRY technology entrepreneurship ecosystem?', clause: cl19)

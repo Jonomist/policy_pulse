@@ -53,6 +53,11 @@
         <a class="btn btn-link clause" data-toggle="collapse" data-target="#collapse_<%= clause.id %>" aria-expanded="true" aria-controls="collapseOne" style="white-space: normal;">
           <h6>Vision <%= clause.id %></h6>
           <%= clause.content %>
+          <% if clause.subclauses.exists? %>
+            <% clause.subclauses.each do |subclause| %>
+              <br><%= subclause.content %>
+            <% end %>
+          <% end %>
           <div id="supporting-content" class="row">
             <% if Metadatum.exists?(clause_id: clause.id) %>
             <%#= link_to 'more info', metadatum_path(clause), :class => "btn btn-outline-secondary", target: :_blank %>
