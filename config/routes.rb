@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-
-
   root to: 'pages#home'
-
   # root to: 'devise/registrations#new'
 
   get 'download_pdf', to: "legislations#download_pdf"
@@ -25,21 +23,16 @@ Rails.application.routes.draw do
 
   resources :metadatum, only: [:show]
 
-
-
   get "/pages/finished", to: 'pages#finished'
 
   resources :answers
 
-
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'users/omniauth_callbacks' }
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # mount Facebook::Messenger::Server, at: 'bot'
+  mount Facebook::Messenger::Server, at: 'bot'
 
   get 'dashboard', to: 'pages#dashboard'
   get 'dashboard_2', to: 'pages#dashboard_2'
-
 end
