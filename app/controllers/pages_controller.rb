@@ -1,8 +1,9 @@
 class PagesController < ApplicationController
+  before_action :skip_pundit?, only: [:home]
+
   def home
     @legislation = Legislation.find_by(title: 'Africa Innovation Policy Manifesto')
   end
-
 
   def finished
     @consultation = Consultation.find_by(user_id: current_user.id)

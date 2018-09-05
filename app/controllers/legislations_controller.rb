@@ -1,5 +1,6 @@
 class LegislationsController < ApplicationController
   before_action :set_legislation, only: [:show, :edit, :update, :destroy]
+  before_action :skip_pundit?, only: [:show]
 
   # GET /legislations
   # GET /legislations.json
@@ -12,6 +13,7 @@ class LegislationsController < ApplicationController
   def show
     @consultation = Consultation.find_by(user_id: current_user.id)
     @questions = Question.where(:clause_id => @legislation.sections.each(&:clauses)).all
+    authorize @legislation
   end
 
   def download_pdf
@@ -21,6 +23,7 @@ class LegislationsController < ApplicationController
   # GET /legislations/new
   def new
     @legislation = Legislation.new
+    authorize @legislation
   end
 
   # GET /legislations/1/edit

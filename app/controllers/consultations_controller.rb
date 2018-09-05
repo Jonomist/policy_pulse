@@ -1,5 +1,5 @@
 class ConsultationsController < ApplicationController
-
+  before_action :skip_pundit?
   before_action :set_consultation, only: [:show, :destroy]
   before_action :authenticate_user!, only: [:create]
 
@@ -9,6 +9,7 @@ class ConsultationsController < ApplicationController
   def new
     @legislation = Legislation.find(params[:legislation_id])
     @consultation = Consultation.new
+    authorize @consultation
   end
 
   def create

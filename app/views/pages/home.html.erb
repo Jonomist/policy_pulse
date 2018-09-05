@@ -5,16 +5,16 @@
         <div class="card-description">
           <p>Welcome to the  consultation for the</p>
           <h1><%= @legislation.title %></h1>
-                <% if current_user.nil? %>
-                  <%= render 'signuphomepage' %>
-                <% else %>
-                  <%= link_to "Get Started", new_legislation_consultation_path(@legislation), :class => 'btn btn-lg btn-primary get-started-button', :role => 'button' %>
+                <%# if current_user.nil? %>
+                  <%#= render 'signuphomepage' %>
+                <%# else %>
+                  <%#= link_to "Get Started", new_legislation_consultation_path(@legislation), :class => 'btn btn-lg btn-primary get-started-button', :role => 'button' %>
                 <p>
-                  <%= @legislation.title %> is designed to strengthen the African technology entrepreneurship ecosystem, and we want your input to help co-create this regional vision.
+                  <%#= @legislation.title %> is designed to strengthen the African technology entrepreneurship ecosystem, and we want your input to help co-create this regional vision.
                 </p>
-                <% end %>
+                <%# end %>
               </div>
-
+            <%#= link_to "Sing in admin", new_admin_user_session %>
             </div>
           </div>
         </div>
