@@ -3,6 +3,7 @@ Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
 legislation = Legislation.last
 p legislation
+
 p legislation.sections.count
 
 # Settings for chatbot presentation page - adds a description and a Get Started button
@@ -10,7 +11,7 @@ Facebook::Messenger::Profile.set({
   greeting:[
     {
       locale: 'default',
-      text: "National ICT Innovation and Entrepreneurship Policy Vision wants to give citizens the chance to participate and shape national economic policy."
+      text: "i4Policy wants to give citizens the chance to participate and shape national economic policy."
     }
   ],
   get_started: {
